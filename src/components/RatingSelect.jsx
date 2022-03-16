@@ -16,8 +16,8 @@ function RatingSelect({select}) {
     'West side story'
   ]
 
-  const handleChange = (e)=>{
-    console.log(e.currentTarget);
+  const handleChange1 = (e)=>{
+    console.log('this', e.currentTarget);
     setSelected(parseInt(e.currentTarget.id))
     select(e.currentTarget.value)
   }
@@ -37,9 +37,9 @@ function RatingSelect({select}) {
           <input
             type='radio'
             id={i}
-            name='rating'
+            name='movie'
             value={bestPicture[i]}
-            onChange={handleChange}
+            onChange={handleChange1}
             checked={selected === i}
           />
           <label htmlFor={i}>{bestPicture[i]}</label>

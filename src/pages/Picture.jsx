@@ -1,15 +1,13 @@
 import FeedbackList from '../components/FeedbackList';
-import FeedbackStats from '../components/FeedbackStats';
 import FeedbackForm from '../components/FeedbackForm';
 
-function Home() {
+function Picture() {
     return (
     <>
-      <FeedbackForm />
-      <FeedbackStats />
+      <FeedbackForm />      
       <FeedbackList />
     </>
   )
 }
 
-export default Home
+export default Picture

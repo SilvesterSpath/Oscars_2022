@@ -1,9 +1,9 @@
 import {useState, useContext, useEffect} from 'react'
 import FeedbackContext from "../context/FeedbackContext"
 
-function RatingSelect({select}) {
-  const [selected, setSelected] = useState(5)
-  const bestPicture = [
+function RatingSelectActor({select}) {
+  const [selected, setSelected] = useState(2)
+  const bestActors = [
     'Javier Bardem',
     'Benedict Cumberbach',
     'Andrew Garfield',
@@ -11,8 +11,8 @@ function RatingSelect({select}) {
     'Denzel Washington',
   ]
 
-  const handleChange = (e)=>{
-    console.log(e.currentTarget);
+  const handleChange2 = (e)=>{
+    console.log('that', e.target);
     setSelected(parseInt(e.currentTarget.id))
     select(e.currentTarget.value)
   }
@@ -32,16 +32,16 @@ function RatingSelect({select}) {
           <input
             type='radio'
             id={i}
-            name='rating'
-            value={bestPicture[i]}
-            onChange={handleChange}
+            name='actor'
+            value={bestActors[i]}
+            onChange={handleChange2}
             checked={selected === i}
           />
-          <label htmlFor={i}>{bestPicture[i]}</label>
+          <label htmlFor={i}>{bestActors[i]}</label>
         </li>
       ))}
     </ul>
   )
 }
 
-export default RatingSelect
+export default RatingSelectActor

@@ -12,13 +12,18 @@ function App() {
     <FeedbackProvider>
       <BrowserRouter>
         <Header />
-
         <div className='container'>
           <Routes>
-            <Route exact path='/' element={<Picture />} />
-          </Routes>
-          <Routes>
-            <Route exact path='/' element={<Actor />} />
+            <Route
+              exact
+              path='/'
+              element={
+                <>
+                  <Picture />
+                  <Actor />
+                </>
+              }
+            />
           </Routes>
           <ScoreBoard />
           <Routes>

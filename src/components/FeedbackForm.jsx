@@ -8,9 +8,9 @@ function FeedbackForm() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
   const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
-  const [rating, setRating] = useState('King Richard')
+  const [movie, setRating] = useState('King Richard')
 
-  const {addFeedback, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
+  const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
 
   useEffect(()=>{
     if(feedbackEditState.edit){
@@ -38,15 +38,14 @@ function FeedbackForm() {
     if(text.trim().length > 1){
       const newFeedback = {         
         text,
-        rating
+        movie
       }
       if(feedbackEditState.edit){
         updateFeedback(feedbackEditState.item.id, newFeedback)
       } else {
-        addFeedback(newFeedback);
+        addItem(newFeedback, "movies");
         setText('')
-      }
-     
+      }     
     }
   }
 
@@ -54,9 +53,9 @@ function FeedbackForm() {
     <Card>
       <form onSubmit={handleSubmit}>
         <h2>Oscar nominations for best picture:</h2>
-        <RatingSelect select={(rating)=>setRating(rating)}/>
+        <RatingSelect select={(movie)=>setRating(movie)}/>
         <div className="input-group">
-          <input type="text" placeholder="Your name.." value={text}list="names" onChange={(e)=> handleTextChange(e)}/>
+          <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">
             <option value="Szilvi"/>
             <option value="Szilveszter"/>

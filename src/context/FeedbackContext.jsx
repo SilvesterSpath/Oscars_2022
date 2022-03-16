@@ -4,11 +4,18 @@ import { v4 as uuidv4 } from 'uuid';
 const FeedbackContext = createContext()
 
 export const FeedbackProvider = ({children}) => {
-  const [movies, setFeedbacks] = useState([{
+  const [movies, setMovies] = useState([{
     id: 1,
     text: 'Example name',
-    rating: 'Example movie'
+    movie: 'Example movie'
   }
+])
+
+const [actors, setActors] = useState([{
+  id: 1,
+  text: 'Example name',
+  actor: 'Example actor'
+}
 ])
 
   const [feedbackEditState, setFeedbackEditState] = useState({
@@ -16,10 +23,11 @@ export const FeedbackProvider = ({children}) => {
     edit: false
   })
 
-  // Delete feedback
-  const deleteFeedback = (id) => {
+  // Delete item
+  const deleteItem = (id, type) => {
     if (window.confirm('Are you sure you want to delete')) {
-      setFeedbacks(movies.filter((item) => item.id !== id));
+      if (type === 'movies') setMovies(movies.filter((item) => item.id !== id));
+      if (type === 'actors') setActors(actors.filter((item) => item.id !== id))      
     }
   };
 
@@ -31,26 +39,27 @@ export const FeedbackProvider = ({children}) => {
     })
   }
 
-  // Add a feedback
-  const addFeedback = (newFeedback) => {
+  // Add a movie
+  const addItem = (newFeedback, type) => {
     if(isNaN(newFeedback.id)){
       newFeedback.id = uuidv4();
     }
+    if(type === 'movies') setMovies([newFeedback, ...movies]);
+    if(type === 'actors') setActors([newFeedback, ...actors]);
+
     
-    console.log(newFeedback);      
-    setFeedbacks([newFeedback, ...movies]);
-    console.log(movies);
   };
 
   // Update feedback item
   const updateFeedback = (id, feedbackItem)=>{
-    setFeedbacks(movies.map((item)=> item.id === id ? {...item, ...feedbackItem}: item))
+    setMovies(movies.map((item)=> item.id === id ? {...item, ...feedbackItem}: item))
   }
  
   return <FeedbackContext.Provider value={{
     movies,
-    deleteFeedback,
-    addFeedback,
+    actors,
+    deleteItem,
+    addItem,
     editFeedback,
     feedbackEditState,
     updateFeedback

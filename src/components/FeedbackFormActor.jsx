@@ -4,21 +4,21 @@ import Button from "../shared/Button"
 import RatingSelectActor from "./RatingSelectActor"
 import FeedbackContext from "../context/FeedbackContext"
 
-function FeedbackForm() {
+function FeedbackFormActor() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
   const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
-  const [rating, setRating] = useState('King Richard')
+  const [actor, setActor] = useState('Andrew Garfield')
 
-  const {addFeedback, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
+  const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
 
   useEffect(()=>{
     if(feedbackEditState.edit){
       setBtnDisables(false)
       setText(feedbackEditState.item.text)
-      setRating(feedbackEditState.item.rating)      
+      setActor(feedbackEditState.item.actor)      
     }
-  },[feedbackEditState.edit, feedbackEditState.item.text, feedbackEditState.item.rating])
+  },[feedbackEditState.edit, feedbackEditState.item.text, feedbackEditState.item.actor])
 
   const handleTextChange = (e)=>{     
     console.log(text);   
@@ -38,12 +38,12 @@ function FeedbackForm() {
     if(text.trim().length > 1){
       const newFeedback = {         
         text,
-        rating
+        actor
       }
       if(feedbackEditState.edit){
         updateFeedback(feedbackEditState.item.id, newFeedback)
       } else {
-        addFeedback(newFeedback);
+        addItem(newFeedback, "actors");
         setText('')
       }
      
@@ -54,9 +54,9 @@ function FeedbackForm() {
     <Card>
       <form onSubmit={handleSubmit}>
         <h2>Oscar nominations for best actor:</h2>
-        <RatingSelectActor select={(rating)=>setRating(rating)}/>
+        <RatingSelectActor select={(actor)=>setActor(actor)}/>
         <div className="input-group">
-          <input type="text" placeholder="Your name.." value={text}list="names" onChange={(e)=> handleTextChange(e)}/>
+          <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">
             <option value="Szilvi"/>
             <option value="Szilveszter"/>
@@ -69,4 +69,4 @@ function FeedbackForm() {
   )
 }
 
-export default FeedbackForm
+export default FeedbackFormActor

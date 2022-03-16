@@ -1,15 +1,13 @@
-import FeedbackList from '../components/FeedbackList';
-import FeedbackStats from '../components/FeedbackStats';
+import FeedbackListActor from '../components/FeedbackListActor';
 import FeedbackFormActor from '../components/FeedbackFormActor';
 
-function Home() {
+function Actor() {
     return (
     <>
       <FeedbackFormActor />
-      <FeedbackStats />
-      <FeedbackList />
+      <FeedbackListActor />
     </>
   )
 }
 
-export default Home
+export default Actor
