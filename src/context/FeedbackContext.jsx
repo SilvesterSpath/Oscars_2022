@@ -44,7 +44,7 @@ export const FeedbackProvider = ({children}) => {
   // Add a feedback
   const addFeedback = (newFeedback) => {
     newFeedback.id = parseInt(uuidv4());
-    feedbacks.push(newFeedback);
+    console.log(newFeedback);      
     setFeedbacks([newFeedback, ...feedbacks]);
     console.log(feedbacks);
   };

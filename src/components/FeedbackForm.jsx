@@ -6,8 +6,8 @@ import FeedbackContext from "../context/FeedbackContext"
 
 function FeedbackForm() {
   const [text, setText] = useState('')
-  const [btnDisabled, setBtnDisables] = useState(true)
-  const [message, setMessage] = useState('')
+  const [btnDisabled, setBtnDisables] = useState(false)
+  const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
   const [rating, setRating] = useState('test')
 
   const {addFeedback, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
@@ -20,13 +20,14 @@ function FeedbackForm() {
     }
   },[feedbackEditState.edit, feedbackEditState.item.text, feedbackEditState.item.rating])
 
-  const handleTextChange = (e)=>{        
-    if (text.length >= 2 ){
+  const handleTextChange = (e)=>{     
+    console.log(text);   
+    if (text.length > 0 ){
       setBtnDisables(false)
       setMessage(null)
     } else {
-      setBtnDisables(true)
-      setMessage('Please write at least 10 chars')
+      setBtnDisables(false)
+      setMessage('Choose a nominant (you can change it later)')
     }
 
     setText(e.target.value)
@@ -34,7 +35,7 @@ function FeedbackForm() {
 
   const handleSubmit = (e)=>{
     e.preventDefault()
-    if(text.trim().length > 10){
+    if(text.trim().length > 1){
       const newFeedback = {        
         text,
         rating
@@ -55,7 +56,11 @@ function FeedbackForm() {
         <h2>Oscar nominations for best picture:</h2>
         <RatingSelect select={(rating)=>setRating(rating)}/>
         <div className="input-group">
-          <input type="text" placeholder="Write a review" value={text} onChange={(e)=> handleTextChange(e)}/>
+          <input type="text" placeholder="Your name.." value={text}list="names" onChange={(e)=> handleTextChange(e)}/>
+          <datalist id="names">
+            <option value="Szilvi"/>
+            <option value="Szilveszter"/>
+          </datalist>
           <Button type="submit" isDisabled={btnDisabled} >Send</Button>
         </div>
         {message && <div className="message">{message}</div>}
