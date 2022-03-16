@@ -1,0 +1,32 @@
+.score_container {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.objScore {
+  text-align: center;
+}
+
+.nameTeam {
+  font-size: 18pt;
+}
+
+.pointScore {
+  font-size: 42pt;
+  font-weight: 600;
+}
+
+.panelScore {
+  display: block;
+}
+
+.incrementer {
+  min-width: 20px;
+}

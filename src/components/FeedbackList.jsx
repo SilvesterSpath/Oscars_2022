@@ -5,10 +5,10 @@ import FeedbackContext from "../context/FeedbackContext"
 import { v4 as uuidv4 } from 'uuid';
 
 function FeedbackList() {
-  const {feedbacks} = useContext(FeedbackContext)
+  const {movies} = useContext(FeedbackContext)
   
 
-  if(!feedbacks || feedbacks.length === 0){
+  if(!movies || movies.length === 0){
     return <p>No Feedback Yet</p>
   }
   
@@ -22,7 +22,7 @@ function FeedbackList() {
   return (
     <div className="feedback-list">  
     <AnimatePresence>
-      {feedbacks.map((item, idx)=>(
+      {movies.map((item, idx)=>(
         <motion.div key={uuidv4()} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
           <FeedbackItem key={idx} item={item} />
         </motion.div>        

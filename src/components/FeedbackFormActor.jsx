@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react"
 import Card from "../shared/Card"
 import Button from "../shared/Button"
-import RatingSelect from "./RatingSelect"
+import RatingSelectActor from "./RatingSelectActor"
 import FeedbackContext from "../context/FeedbackContext"
 
 function FeedbackForm() {
@@ -53,8 +53,8 @@ function FeedbackForm() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>Oscar nominations for best picture:</h2>
-        <RatingSelect select={(rating)=>setRating(rating)}/>
+        <h2>Oscar nominations for best actor:</h2>
+        <RatingSelectActor select={(rating)=>setRating(rating)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text}list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">

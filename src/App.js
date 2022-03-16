@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import AboutPage from './pages/AboutPage';
-import Home from './pages/Home';
+import Picture from './pages/Picture';
+import Actor from './pages/Actor';
+import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import { FeedbackProvider } from './context/FeedbackContext';
 
@@ -10,10 +12,15 @@ function App() {
     <FeedbackProvider>
       <BrowserRouter>
         <Header />
+
         <div className='container'>
           <Routes>
-            <Route exact path='/' element={<Home />} />
+            <Route exact path='/' element={<Picture />} />
           </Routes>
+          <Routes>
+            <Route exact path='/' element={<Actor />} />
+          </Routes>
+          <ScoreBoard />
           <Routes>
             <Route path='/about' element={<AboutPage />} />
           </Routes>

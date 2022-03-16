@@ -4,16 +4,11 @@ import FeedbackContext from "../context/FeedbackContext"
 function RatingSelect({select}) {
   const [selected, setSelected] = useState(5)
   const bestPicture = [
-    'Belfast',
-    'Coda',
-    'Drive my car',
-    "Don't look up",
-    'Dune',
-    'King Richard',
-    'Licorice Pizza',
-    'Nightmare Alley',
-    'The power of the dog',
-    'West side story'
+    'Javier Bardem',
+    'Benedict Cumberbach',
+    'Andrew Garfield',
+    "Will Smith",
+    'Denzel Washington',
   ]
 
   const handleChange = (e)=>{
@@ -32,7 +27,7 @@ function RatingSelect({select}) {
 
   return (
     <ul className='rating'>
-      {Array.from({ length: 10 }, (_, i) => (
+      {Array.from({ length: 5 }, (_, i) => (
         <li key={`rating-${i + 1}`}>
           <input
             type='radio'
