@@ -12,7 +12,7 @@ function Header({bgColor, textColor, text}) {
 }
 
 Header.defaultProps = {  
-  bgColor: 'rgba(0,0,0,0.4)',
+  bgColor: 'rgba(0,0,50,0.4)',
   textColor: '#ff6a95',
   text: '..and the Oscar goes to..'
 }

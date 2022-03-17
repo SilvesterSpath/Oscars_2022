@@ -2,7 +2,7 @@ import {useState, useContext, useEffect} from 'react'
 import FeedbackContext from "../context/FeedbackContext"
 
 function RatingSelectActor({select}) {
-  const [selected, setSelected] = useState(2)
+  const [selected, setSelected] = useState(null)
   const bestActors = [
     'Javier Bardem',
     'Benedict Cumberbach',

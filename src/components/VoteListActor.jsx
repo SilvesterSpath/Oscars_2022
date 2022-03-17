@@ -1,4 +1,4 @@
-import FeedbackItem from "./FeedbackItem"
+import VoteItem from "./VoteItem"
 import {motion, AnimatePresence} from 'framer-motion'
 import {useContext} from 'react'
 import FeedbackContext from "../context/FeedbackContext"
@@ -17,7 +17,7 @@ function FeedbackListActor() {
     <AnimatePresence>
       {actors.map((item, idx)=>(
         <motion.div key={uuidv4()} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
-          <FeedbackItem key={idx} item={item} type={'actors'}/>
+          <VoteItem key={idx} item={item} type={'actors'}/>
         </motion.div>        
       ))}
     </AnimatePresence>

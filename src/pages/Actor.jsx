@@ -1,11 +1,11 @@
-import FeedbackListActor from '../components/FeedbackListActor';
-import FeedbackFormActor from '../components/FeedbackFormActor';
+import VoteListActor from '../components/VoteListActor';
+import VoteFormActor from '../components/VoteFormActor';
 
 function Actor() {
     return (
     <>
-      <FeedbackFormActor />
-      <FeedbackListActor />
+      <VoteFormActor />
+      <VoteListActor />
     </>
   )
 }

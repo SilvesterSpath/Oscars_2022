@@ -1,14 +1,14 @@
 import { useState, useContext, useEffect } from "react"
 import Card from "../shared/Card"
 import Button from "../shared/Button"
-import RatingSelectActor from "./RatingSelectActor"
+import SelectActor from "./SelectActor"
 import FeedbackContext from "../context/FeedbackContext"
 
 function FeedbackFormActor() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
   const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
-  const [actor, setActor] = useState('Andrew Garfield')
+  const [actor, setActor] = useState('')
 
   const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
 
@@ -54,7 +54,7 @@ function FeedbackFormActor() {
     <Card>
       <form onSubmit={handleSubmit}>
         <h2>Oscar nominations for best actor:</h2>
-        <RatingSelectActor select={(actor)=>setActor(actor)}/>
+        <SelectActor select={(actor)=>setActor(actor)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">

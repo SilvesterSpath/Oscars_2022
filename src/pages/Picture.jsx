@@ -1,11 +1,11 @@
-import FeedbackList from '../components/FeedbackList';
-import FeedbackForm from '../components/FeedbackForm';
+import VoteListMovie from '../components/VoteListMovie';
+import VoteFormMovie from '../components/VoteFormMovie';
 
 function Picture() {
     return (
     <>
-      <FeedbackForm />      
-      <FeedbackList />
+      <VoteFormMovie />      
+      <VoteListMovie />
     </>
   )
 }

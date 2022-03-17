@@ -1,14 +1,14 @@
 import { useState, useContext, useEffect } from "react"
 import Card from "../shared/Card"
 import Button from "../shared/Button"
-import RatingSelect from "./RatingSelect"
+import SelectMovie from "./SelectMovie"
 import FeedbackContext from "../context/FeedbackContext"
 
 function FeedbackForm() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
   const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
-  const [movie, setRating] = useState('King Richard')
+  const [movie, setRating] = useState('')
 
   const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
 
@@ -53,7 +53,7 @@ function FeedbackForm() {
     <Card>
       <form onSubmit={handleSubmit}>
         <h2>Oscar nominations for best picture:</h2>
-        <RatingSelect select={(movie)=>setRating(movie)}/>
+        <SelectMovie select={(movie)=>setRating(movie)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">

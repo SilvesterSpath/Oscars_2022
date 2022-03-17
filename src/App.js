@@ -5,7 +5,7 @@ import Picture from './pages/Picture';
 import Actor from './pages/Actor';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
-import ActorIconLink from './components/ActorIconLink';
+import CategoryLinks from './components/CategoryLinks';
 import { FeedbackProvider } from './context/FeedbackContext';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <FeedbackProvider>
       <BrowserRouter>
         <Header />
-        <ActorIconLink />
+        <CategoryLinks />
         <div className='container'>
           <Routes>
             <Route exact path='/' element={<Picture />} />
