@@ -5,6 +5,7 @@ import Picture from './pages/Picture';
 import Actor from './pages/Actor';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
+import ActorIconLink from './components/ActorIconLink';
 import { FeedbackProvider } from './context/FeedbackContext';
 
 function App() {
@@ -12,18 +13,13 @@ function App() {
     <FeedbackProvider>
       <BrowserRouter>
         <Header />
+        <ActorIconLink />
         <div className='container'>
           <Routes>
-            <Route
-              exact
-              path='/'
-              element={
-                <>
-                  <Picture />
-                  <Actor />
-                </>
-              }
-            />
+            <Route exact path='/' element={<Picture />} />
+          </Routes>
+          <Routes>
+            <Route path='/actor' element={<Actor />} />
           </Routes>
           <ScoreBoard />
           <Routes>

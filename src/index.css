@@ -204,6 +204,14 @@ input:focus {
   color: #ff6a95;
 }
 
+.about-link p {
+  color: #202142;
+}
+
+.about-link p:hover {
+  color: #ff6a95;
+}
+
 .about h1 {
   margin-bottom: 20px;
 }

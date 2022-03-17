@@ -27,19 +27,20 @@ function RatingSelectActor({select}) {
 
   return (
     <ul className='rating'>
-      {Array.from({ length: 5 }, (_, i) => (
-        <li key={`rating-${i + 1}`}>
+      {bestActors.map((item, idx)=> (
+        <li key={`rating-${idx + 1}`}>
           <input
             type='radio'
-            id={i}
+            id={idx}
             name='actor'
-            value={bestActors[i]}
+            value={item}
             onChange={handleChange2}
-            checked={selected === i}
+            checked={selected === idx}
           />
-          <label htmlFor={i}>{bestActors[i]}</label>
+          <label htmlFor={idx}>{item}</label>
         </li>
       ))}
+
     </ul>
   )
 }
