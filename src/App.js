@@ -3,6 +3,7 @@ import Header from './components/Header';
 import AboutPage from './pages/AboutPage';
 import Picture from './pages/Picture';
 import Actor from './pages/Actor';
+import Director from './pages/Director';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -20,6 +21,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/actor' element={<Actor />} />
+          </Routes>
+          <Routes>
+            <Route path='/director' element={<Director />} />
           </Routes>
           <ScoreBoard />
           <Routes>

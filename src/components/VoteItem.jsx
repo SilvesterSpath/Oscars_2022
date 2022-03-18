@@ -4,12 +4,25 @@ import { FaTimes, FaEdit } from 'react-icons/fa'
 import {useContext} from 'react'
 import FeedbackContext from "../context/FeedbackContext"
 
-function FeedbackItem({item, type}) {
+function VoteItem({item, type}) {
   const {deleteItem, editFeedback} = useContext(FeedbackContext)
+
+  function renderSwitch(type) {
+    switch(type) {
+      case 'movies':
+        return item.movie;
+      case 'actors':
+        return item.actor;
+      case 'directors':
+        return item.director;
+      default:
+        return [];
+    }
+  }
 
   return (    
      <Card >
-      <div className="num-display">{type === 'movies'? item.movie : item.actor}</div>
+      <div className="num-display">{renderSwitch(type)}</div>
       <button className="close" onClick={() => deleteItem(item.id, type)} >
         <FaTimes color='purple'/>
       </button>
@@ -29,4 +42,4 @@ Card.propTypes = {
   item: PropTypes.object
 }
 
-export default FeedbackItem
+export default VoteItem
