@@ -201,16 +201,22 @@ input:focus {
   cursor: pointer;
 }
 
+.a:hover + .b {
+  color: #ff6a95;
+}
+
 .about-link a:hover {
   color: #ff6a95;
 }
 
 .about-link p {
-  color: #202142;
+  color: #320935;
 }
 
-.about-link p:hover {
-  color: #ff6a95;
+.links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .about h1 {
@@ -219,15 +225,6 @@ input:focus {
 
 .about p {
   margin: 10px 0;
-}
-
-.links p {
-  color: #202142;
-}
-
-.links:hover {
-  cursor: pointer;
-  color: #ff6a95;
 }
 
 @media (max-width: 600px) {
