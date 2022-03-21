@@ -3,7 +3,7 @@ import Header from './components/Header';
 import AboutPage from './pages/AboutPage';
 import Picture from './pages/Picture';
 import Actor from './pages/Actor';
-import Actor_sup from './pages/Actor_sup';
+import ActorSup from './pages/ActorSup';
 import Actress from './pages/Actress';
 import Director from './pages/Director';
 import Animated from './pages/Animated';
@@ -26,7 +26,7 @@ function App() {
             <Route path='/actor' element={<Actor />} />
           </Routes>
           <Routes>
-            <Route path='/actor_sup' element={<Actor_sup />} />
+            <Route path='/actor_sup' element={<ActorSup />} />
           </Routes>
           <Routes>
             <Route path='/actress' element={<Actress />} />

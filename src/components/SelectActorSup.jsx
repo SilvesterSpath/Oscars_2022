@@ -32,7 +32,7 @@ function SelectActorSup({select}) {
           <input
             type='radio'
             id={idx}
-            name='actor_sup'
+            name='actor-sup'
             value={item}
             onChange={handleChange2}
             checked={selected === idx}

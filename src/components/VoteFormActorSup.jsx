@@ -43,7 +43,7 @@ function VoteFormActorSup() {
       if(feedbackEditState.edit){
         updateFeedback(feedbackEditState.item.id, newFeedback)
       } else {
-        addItem(newFeedback, "actor_sup");
+        addItem(newFeedback, "actor-sup");
         setText('')
       }
      

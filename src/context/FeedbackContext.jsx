@@ -18,6 +18,13 @@ const [actors, setActors] = useState([{
 }
 ])
 
+const [actor_sup, setActorSup] = useState([{
+  id: 1,
+  text: 'Example name',
+  actor_sup: 'Example actor-sup'
+}
+])
+
 const [actress, setActress] = useState([{
   id: 1,
   text: 'Example name',
@@ -54,6 +61,7 @@ const [animated, setAnimated] = useState([{
       if (type === 'directors') setDirectors(directors.filter((item) => item.id !== id));      
       if (type === 'actress') setActress(actress.filter((item) => item.id !== id));      
       if (type === 'animated') setAnimated(animated.filter((item) => item.id !== id));      
+      if (type === 'actor-sup') setActorSup(actor_sup.filter((item) => item.id !== id));      
     }
   };
 
@@ -72,6 +80,7 @@ const [animated, setAnimated] = useState([{
     }
     if(type === 'movies') setMovies([newFeedback, ...movies]);
     if(type === 'actors') setActors([newFeedback, ...actors]);
+    if(type === 'actor-sup') setActorSup([newFeedback, ...actor_sup]);
     if(type === 'actress') setActress([newFeedback, ...actress]);
     if(type === 'directors') setDirectors([newFeedback, ...directors]);
     if(type === 'animated') setAnimated([newFeedback, ...animated]);
@@ -90,6 +99,7 @@ const [animated, setAnimated] = useState([{
     actress,
     directors,
     animated,
+    actor_sup,
     deleteItem,
     addItem,
     editFeedback,
