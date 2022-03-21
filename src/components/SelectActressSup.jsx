@@ -1,14 +1,14 @@
 import {useState, useContext, useEffect} from 'react'
 import FeedbackContext from "../context/FeedbackContext"
 
-function SelectActress({select}) {
+function SelectActressSup({select}) {
   const [selected, setSelected] = useState(null)
-  const bestActress = [
-    'Jessica Chastain',
-    'Olivia Colman',
-    'Penélope Cruz',
-    'Nicole Kidman',
-    'Kristen Stewart',
+  const bestActressSup = [
+    'Jessie Buckley',
+    'Ariana DeBose',
+    'Judi Dench',
+    'Kirsten Dunst',
+    'Aunjanue Ellis',
   ]
 
   const handleChange2 = (e)=>{
@@ -27,12 +27,12 @@ function SelectActress({select}) {
 
   return (
     <ul className='rating'>
-      {bestActress.map((item, idx)=> (
+      {bestActressSup.map((item, idx)=> (
         <li key={`rating-${idx + 1}`}>
           <input
             type='radio'
             id={idx}
-            name='actress'
+            name='actress-sup'
             value={item}
             onChange={handleChange2}
             checked={selected === idx}
@@ -44,4 +44,4 @@ function SelectActress({select}) {
   )
 }
 
-export default SelectActress
+export default SelectActressSup

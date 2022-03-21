@@ -5,6 +5,7 @@ import Picture from './pages/Picture';
 import Actor from './pages/Actor';
 import ActorSup from './pages/ActorSup';
 import Actress from './pages/Actress';
+import ActressSup from './pages/ActressSup';
 import Director from './pages/Director';
 import Animated from './pages/Animated';
 import ScoreBoard from './score/ScoreBoard';
@@ -30,6 +31,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/actress' element={<Actress />} />
+          </Routes>
+          <Routes>
+            <Route path='/actress_sup' element={<ActressSup />} />
           </Routes>
           <Routes>
             <Route path='/director' element={<Director />} />

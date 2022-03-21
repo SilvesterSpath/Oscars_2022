@@ -218,7 +218,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   text-align: center;
-  min-width: 60px;
+  min-width: 70px;
 }
 
 .about h1 {

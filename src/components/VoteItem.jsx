@@ -15,6 +15,8 @@ function VoteItem({item, type}) {
         return item.actor;
       case 'actress':
         return item.actress;
+      case 'actress-sup':
+        return item.actress_sup;
       case 'actor-sup':
         return item.actor_sup;
       case 'directors':

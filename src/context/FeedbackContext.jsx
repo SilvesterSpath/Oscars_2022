@@ -21,7 +21,7 @@ const [actors, setActors] = useState([{
 const [actor_sup, setActorSup] = useState([{
   id: 1,
   text: 'Example name',
-  actor_sup: 'Example actor-sup'
+  actor_sup: 'Example actor sup'
 }
 ])
 
@@ -29,6 +29,13 @@ const [actress, setActress] = useState([{
   id: 1,
   text: 'Example name',
   actress: 'Example actress'
+}
+])
+
+const [actress_sup, setActressSup] = useState([{
+  id: 1,
+  text: 'Example name',
+  actress_sup: 'Example actress sup'
 }
 ])
 
@@ -60,6 +67,7 @@ const [animated, setAnimated] = useState([{
       if (type === 'actors') setActors(actors.filter((item) => item.id !== id));
       if (type === 'directors') setDirectors(directors.filter((item) => item.id !== id));      
       if (type === 'actress') setActress(actress.filter((item) => item.id !== id));      
+      if (type === 'actress-sup') setActressSup(actress_sup.filter((item) => item.id !== id));      
       if (type === 'animated') setAnimated(animated.filter((item) => item.id !== id));      
       if (type === 'actor-sup') setActorSup(actor_sup.filter((item) => item.id !== id));      
     }
@@ -82,6 +90,7 @@ const [animated, setAnimated] = useState([{
     if(type === 'actors') setActors([newFeedback, ...actors]);
     if(type === 'actor-sup') setActorSup([newFeedback, ...actor_sup]);
     if(type === 'actress') setActress([newFeedback, ...actress]);
+    if(type === 'actress-sup') setActressSup([newFeedback, ...actress_sup]);
     if(type === 'directors') setDirectors([newFeedback, ...directors]);
     if(type === 'animated') setAnimated([newFeedback, ...animated]);
 
@@ -97,6 +106,7 @@ const [animated, setAnimated] = useState([{
     movies,
     actors,
     actress,
+    actress_sup,
     directors,
     animated,
     actor_sup,

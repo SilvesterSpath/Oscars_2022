@@ -2,7 +2,8 @@ import {MdRecentActors} from 'react-icons/md'
 import {MdOutlineRecentActors} from 'react-icons/md'
 import {BiMoviePlay} from 'react-icons/bi'
 import {GiDirectorChair} from 'react-icons/gi'
-import {FcBusinesswoman} from 'react-icons/fc'
+import {ImWoman} from 'react-icons/im'
+import {IoMdWoman} from 'react-icons/io'
 import {FcFilmReel} from 'react-icons/fc'
 import {Link} from 'react-router-dom'
 
@@ -29,9 +30,15 @@ function CategoryLinks() {
       </div>
       <div className='links'>
         <Link className='a' to='/actress'>
-          <FcBusinesswoman size={30}/>        
+          <ImWoman size={30}/>        
         </Link>      
         <p className='b'>actress</p>
+      </div>
+      <div className='links'>
+        <Link className='a' to='/actress_sup'>
+          <IoMdWoman size={30}/>        
+        </Link>      
+        <p className='b'>actress_sup</p>
       </div>
       <div className='links'>
         <Link className='a' to='/director'>

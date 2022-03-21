@@ -1,14 +1,14 @@
 import { useState, useContext, useEffect } from "react"
 import Card from "../shared/Card"
 import Button from "../shared/Button"
-import SelectActress from "./SelectActress"
+import SelectActressSup from "./SelectActressSup"
 import FeedbackContext from "../context/FeedbackContext"
 
-function VoteFormActress() {
+function VoteFormActressSup() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
   const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
-  const [actress, setActress] = useState('')
+  const [actress_sup, setActressSup] = useState('')
 
   const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
 
@@ -16,7 +16,7 @@ function VoteFormActress() {
     if(feedbackEditState.edit){
       setBtnDisables(false)
       setText(feedbackEditState.item.text)
-      setActress(feedbackEditState.item.actress)      
+      setActressSup(feedbackEditState.item.actress)      
     }
   },[feedbackEditState.edit, feedbackEditState.item.text, feedbackEditState.item.actress])
 
@@ -38,12 +38,12 @@ function VoteFormActress() {
     if(text.trim().length > 1){
       const newFeedback = {         
         text,
-        actress
+        actress_sup
       }
       if(feedbackEditState.edit){
         updateFeedback(feedbackEditState.item.id, newFeedback)
       } else {
-        addItem(newFeedback, "actress");
+        addItem(newFeedback, "actress-sup");
         setText('')
       }
      
@@ -53,8 +53,8 @@ function VoteFormActress() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>Oscar nominations for best actress:</h2>
-        <SelectActress select={(actress)=>setActress(actress)}/>
+        <h2>Oscar nominations for best supporting actress:</h2>
+        <SelectActressSup select={(actress_sup)=>setActressSup(actress_sup)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">
@@ -69,4 +69,4 @@ function VoteFormActress() {
   )
 }
 
-export default VoteFormActress
+export default VoteFormActressSup
