@@ -23,6 +23,8 @@ function VoteItem({item, type}) {
         return item.director;
       case 'animated':
         return item.animated;
+      case 'cinematography':
+        return item.cinematography;
       default:
         return [];
     }

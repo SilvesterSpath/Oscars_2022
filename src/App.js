@@ -8,6 +8,7 @@ import Actress from './pages/Actress';
 import ActressSup from './pages/ActressSup';
 import Director from './pages/Director';
 import Animated from './pages/Animated';
+import Cinematography from './pages/Cinematography';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -40,6 +41,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/animated' element={<Animated />} />
+          </Routes>
+          <Routes>
+            <Route path='/cinematography' element={<Cinematography />} />
           </Routes>
           <ScoreBoard />
           <Routes>

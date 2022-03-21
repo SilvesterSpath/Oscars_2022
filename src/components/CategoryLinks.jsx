@@ -5,6 +5,7 @@ import {GiDirectorChair} from 'react-icons/gi'
 import {ImWoman} from 'react-icons/im'
 import {IoMdWoman} from 'react-icons/io'
 import {FcFilmReel} from 'react-icons/fc'
+import {FaPhotoVideo} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 
 function CategoryLinks() {
@@ -47,11 +48,17 @@ function CategoryLinks() {
         <p className='b'>directors</p>    
     </div>
       <div className='links'>
-      <Link className='a' to='/animated'>
-        <FcFilmReel size={30}/>        
-      </Link>  
-      <p className='b'>animated</p>    
-    </div>
+        <Link className='a' to='/animated'>
+          <FcFilmReel size={30}/>        
+        </Link>  
+        <p className='b'>animated</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/cinematography'>
+          <FaPhotoVideo size={30}/>        
+        </Link>  
+        <p className='b'>cinematography</p>    
+      </div>
     </div>
   )
 }

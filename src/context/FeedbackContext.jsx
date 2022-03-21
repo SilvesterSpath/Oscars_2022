@@ -46,6 +46,13 @@ const [directors, setDirectors] = useState([{
 }
 ])
 
+const [cinematography, setCinematography] = useState([{
+  id: 1,
+  text: 'Example name',
+  cinematography: 'Example cinematography'
+}
+])
+
 const [animated, setAnimated] = useState([{
   id: 1,
   text: 'Example name',
@@ -54,11 +61,10 @@ const [animated, setAnimated] = useState([{
 ])
 
 
-
-  const [feedbackEditState, setFeedbackEditState] = useState({
-    item: {},
-    edit: false
-  })
+const [feedbackEditState, setFeedbackEditState] = useState({
+  item: {},
+  edit: false
+})
 
   // Delete item
   const deleteItem = (id, type) => {
@@ -70,6 +76,7 @@ const [animated, setAnimated] = useState([{
       if (type === 'actress-sup') setActressSup(actress_sup.filter((item) => item.id !== id));      
       if (type === 'animated') setAnimated(animated.filter((item) => item.id !== id));      
       if (type === 'actor-sup') setActorSup(actor_sup.filter((item) => item.id !== id));      
+      if (type === 'cinematography') setActorSup(cinematography.filter((item) => item.id !== id));      
     }
   };
 
@@ -93,6 +100,7 @@ const [animated, setAnimated] = useState([{
     if(type === 'actress-sup') setActressSup([newFeedback, ...actress_sup]);
     if(type === 'directors') setDirectors([newFeedback, ...directors]);
     if(type === 'animated') setAnimated([newFeedback, ...animated]);
+    if(type === 'cinematography') setCinematography([newFeedback, ...cinematography]);
 
     
   };
@@ -110,6 +118,7 @@ const [animated, setAnimated] = useState([{
     directors,
     animated,
     actor_sup,
+    cinematography,
     deleteItem,
     addItem,
     editFeedback,
