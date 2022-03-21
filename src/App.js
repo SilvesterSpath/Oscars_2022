@@ -3,8 +3,10 @@ import Header from './components/Header';
 import AboutPage from './pages/AboutPage';
 import Picture from './pages/Picture';
 import Actor from './pages/Actor';
+import Actor_sup from './pages/Actor_sup';
 import Actress from './pages/Actress';
 import Director from './pages/Director';
+import Animated from './pages/Animated';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -24,10 +26,16 @@ function App() {
             <Route path='/actor' element={<Actor />} />
           </Routes>
           <Routes>
+            <Route path='/actor_sup' element={<Actor_sup />} />
+          </Routes>
+          <Routes>
             <Route path='/actress' element={<Actress />} />
           </Routes>
           <Routes>
             <Route path='/director' element={<Director />} />
+          </Routes>
+          <Routes>
+            <Route path='/animated' element={<Animated />} />
           </Routes>
           <ScoreBoard />
           <Routes>

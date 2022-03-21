@@ -17,6 +17,8 @@ function VoteItem({item, type}) {
         return item.actress;
       case 'directors':
         return item.director;
+      case 'animated':
+        return item.animated;
       default:
         return [];
     }

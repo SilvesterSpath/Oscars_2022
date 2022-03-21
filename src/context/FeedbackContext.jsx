@@ -18,6 +18,13 @@ const [actors, setActors] = useState([{
 }
 ])
 
+const [actress, setActress] = useState([{
+  id: 1,
+  text: 'Example name',
+  actress: 'Example actress'
+}
+])
+
 const [directors, setDirectors] = useState([{
   id: 1,
   text: 'Example name',
@@ -25,12 +32,14 @@ const [directors, setDirectors] = useState([{
 }
 ])
 
-const [actress, setActress] = useState([{
+const [animated, setAnimated] = useState([{
   id: 1,
   text: 'Example name',
-  actress: 'Example actress'
+  animated: 'Example animated'
 }
 ])
+
+
 
   const [feedbackEditState, setFeedbackEditState] = useState({
     item: {},
@@ -44,6 +53,7 @@ const [actress, setActress] = useState([{
       if (type === 'actors') setActors(actors.filter((item) => item.id !== id));
       if (type === 'directors') setDirectors(directors.filter((item) => item.id !== id));      
       if (type === 'actress') setActress(actress.filter((item) => item.id !== id));      
+      if (type === 'animated') setAnimated(animated.filter((item) => item.id !== id));      
     }
   };
 
@@ -64,6 +74,7 @@ const [actress, setActress] = useState([{
     if(type === 'actors') setActors([newFeedback, ...actors]);
     if(type === 'actress') setActress([newFeedback, ...actress]);
     if(type === 'directors') setDirectors([newFeedback, ...directors]);
+    if(type === 'animated') setAnimated([newFeedback, ...animated]);
 
     
   };
@@ -78,6 +89,7 @@ const [actress, setActress] = useState([{
     actors,
     actress,
     directors,
+    animated,
     deleteItem,
     addItem,
     editFeedback,
