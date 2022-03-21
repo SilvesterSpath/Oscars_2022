@@ -1,7 +1,7 @@
 import {useState, useContext, useEffect} from 'react'
 import FeedbackContext from "../context/FeedbackContext"
 
-function RatingSelectActor({select}) {
+function RatingSelectActress({select}) {
   const [selected, setSelected] = useState(null)
   const bestActress = [
     'Jessie Buckley',
@@ -32,7 +32,7 @@ function RatingSelectActor({select}) {
           <input
             type='radio'
             id={idx}
-            name='actor'
+            name='actress'
             value={item}
             onChange={handleChange2}
             checked={selected === idx}
@@ -44,4 +44,4 @@ function RatingSelectActor({select}) {
   )
 }
 
-export default RatingSelectActor
+export default RatingSelectActress

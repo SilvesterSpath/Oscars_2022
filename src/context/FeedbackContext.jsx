@@ -17,10 +17,18 @@ const [actors, setActors] = useState([{
   actor: 'Example actor'
 }
 ])
+
 const [directors, setDirectors] = useState([{
   id: 1,
   text: 'Example name',
   director: 'Example director'
+}
+])
+
+const [actress, setActress] = useState([{
+  id: 1,
+  text: 'Example name',
+  actress: 'Example actress'
 }
 ])
 
@@ -33,7 +41,9 @@ const [directors, setDirectors] = useState([{
   const deleteItem = (id, type) => {
     if (window.confirm('Are you sure you want to delete')) {
       if (type === 'movies') setMovies(movies.filter((item) => item.id !== id));
-      if (type === 'actors') setActors(actors.filter((item) => item.id !== id));if (type === 'directors') setActors(directors.filter((item) => item.id !== id));      
+      if (type === 'actors') setActors(actors.filter((item) => item.id !== id));
+      if (type === 'directors') setDirectors(directors.filter((item) => item.id !== id));      
+      if (type === 'actress') setActress(actress.filter((item) => item.id !== id));      
     }
   };
 
@@ -52,6 +62,7 @@ const [directors, setDirectors] = useState([{
     }
     if(type === 'movies') setMovies([newFeedback, ...movies]);
     if(type === 'actors') setActors([newFeedback, ...actors]);
+    if(type === 'actress') setActress([newFeedback, ...actress]);
     if(type === 'directors') setDirectors([newFeedback, ...directors]);
 
     
@@ -65,6 +76,7 @@ const [directors, setDirectors] = useState([{
   return <FeedbackContext.Provider value={{
     movies,
     actors,
+    actress,
     directors,
     deleteItem,
     addItem,

@@ -1,11 +1,11 @@
-import VoteListActor from '../components/VoteListActor';
-import VoteFormActor from '../components/VoteFormActor';
+import VoteListActress from '../components/VoteListActress';
+import VoteFormActress from '../components/VoteFormActress';
 
 function Actress() {
     return (
     <>
-      <VoteFormActor />
-      <VoteListActor />
+      <VoteFormActress />
+      <VoteListActress />
     </>
   )
 }

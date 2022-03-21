@@ -13,6 +13,8 @@ function VoteItem({item, type}) {
         return item.movie;
       case 'actors':
         return item.actor;
+      case 'actress':
+        return item.actress;
       case 'directors':
         return item.director;
       default:
