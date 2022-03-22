@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import Picture from './pages/Picture';
 import Actor from './pages/Actor';
@@ -23,7 +24,10 @@ function App() {
         <CategoryLinks />
         <div className='container'>
           <Routes>
-            <Route exact path='/' element={<Picture />} />
+            <Route exact path='/' element={<Home />} />
+          </Routes>
+          <Routes>
+            <Route exact path='/movies' element={<Picture />} />
           </Routes>
           <Routes>
             <Route path='/actor' element={<Actor />} />

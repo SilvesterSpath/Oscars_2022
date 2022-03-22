@@ -7,6 +7,7 @@ import {IoMdWoman} from 'react-icons/io'
 import {FcFilmReel} from 'react-icons/fc'
 import {FaPhotoVideo} from 'react-icons/fa'
 import {MdDesignServices} from 'react-icons/md'
+import {GiPodium} from 'react-icons/gi'
 import {Link} from 'react-router-dom'
 
 function CategoryLinks() {
@@ -14,21 +15,27 @@ function CategoryLinks() {
     <div className='about-link'>
       <div className='links'>
         <Link className='a' to='/'>
+          <GiPodium size={30}/>        
+        </Link>  
+        <p className='b'>standing</p>      
+      </div>    
+      <div className='links'>
+        <Link className='a' to='/movies'>
           <BiMoviePlay size={30}/>        
         </Link>  
-        <p className='b'>movies</p>      
+        <p className='b'>movie</p>      
       </div>
       <div className='links'>
         <Link className='a' to='/actor'>
           <MdRecentActors size={30}/>        
         </Link>      
-        <p className='b'>actors</p>
+        <p className='b'>actor</p>
       </div>
       <div className='links'>
         <Link className='a' to='/actor_sup'>
           <MdOutlineRecentActors size={30}/>        
         </Link>      
-        <p className='b'>actor_sup</p>
+        <p className='b'>actorSup</p>
       </div>
       <div className='links'>
         <Link className='a' to='/actress'>
@@ -40,13 +47,13 @@ function CategoryLinks() {
         <Link className='a' to='/actress_sup'>
           <IoMdWoman size={30}/>        
         </Link>      
-        <p className='b'>actress_sup</p>
+        <p className='b'>actressSup</p>
       </div>
       <div className='links'>
         <Link className='a' to='/director'>
           <GiDirectorChair size={30}/>        
         </Link>  
-        <p className='b'>directors</p>    
+        <p className='b'>director</p>    
     </div>
       <div className='links'>
         <Link className='a' to='/animated'>

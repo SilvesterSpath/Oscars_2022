@@ -192,6 +192,7 @@ input:focus {
   display: flex;
   justify-content: center;
   text-decoration: none;
+  flex-wrap: wrap;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
@@ -215,8 +216,7 @@ input:focus {
 }
 
 .links {
-  display: flex;
-  flex-direction: column;
+  margin-top: 3px;
   text-align: center;
   min-width: 60px;
 }
