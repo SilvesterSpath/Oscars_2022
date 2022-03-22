@@ -14,6 +14,7 @@ import Costume from './pages/Costume';
 import Documentary from './pages/Documentary';
 import DocumentaryS from './pages/DocumentaryS';
 import Editing from './pages/Editing';
+import International from './pages/International';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -64,6 +65,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/editing' element={<Editing />} />
+          </Routes>
+          <Routes>
+            <Route path='/internat' element={<International />} />
           </Routes>
           <ScoreBoard />
           <Routes>

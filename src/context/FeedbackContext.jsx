@@ -81,6 +81,13 @@ const [costume, setCostume] = useState([{
 }
 ])
 
+const [editing, setEditing] = useState([{
+  id: 1,
+  text: 'Example name',
+  editing: 'Example editing'
+}
+])
+
 
 const [feedbackEditState, setFeedbackEditState] = useState({
   item: {},
@@ -101,6 +108,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
       if (type === 'costume') setCostume(costume.filter((item) => item.id !== id));      
       if (type === 'doc') setDoc(doc.filter((item) => item.id !== id));      
       if (type === 'docs') setDocS(docs.filter((item) => item.id !== id));      
+      if (type === 'editing') setEditing(editing.filter((item) => item.id !== id));      
     }
   };
 
@@ -128,7 +136,8 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     if(type === 'costume') setCostume([newFeedback, ...costume]);
     if(type === 'doc') setDoc([newFeedback, ...doc]);
     if(type === 'docs') setDocS([newFeedback, ...docs]);
-    
+    if(type === 'editing') setEditing([newFeedback, ...editing]);
+  
   };
 
   // Update feedback item
@@ -148,6 +157,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     costume,
     doc,
     docs,
+    editing,
     deleteItem,
     addItem,
     editFeedback,

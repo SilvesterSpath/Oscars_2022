@@ -7,6 +7,7 @@ import {IoMdWoman} from 'react-icons/io'
 import {FcFilmReel} from 'react-icons/fc'
 import {FaPhotoVideo} from 'react-icons/fa'
 import {FaFeatherAlt} from 'react-icons/fa'
+import {FaYandexInternational} from 'react-icons/fa'
 import {MdDesignServices} from 'react-icons/md'
 import {GiPodium} from 'react-icons/gi'
 import {GiFeather} from 'react-icons/gi'
@@ -93,6 +94,12 @@ function CategoryLinks() {
           <RiScissors2Fill size={30}/>        
         </Link>  
         <p className='b'>editing</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/internat'>
+          <FaYandexInternational size={30}/>        
+        </Link>  
+        <p className='b'>internat</p>    
       </div>
     </div>
   )
