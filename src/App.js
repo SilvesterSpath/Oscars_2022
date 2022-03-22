@@ -11,6 +11,7 @@ import Director from './pages/Director';
 import Animated from './pages/Animated';
 import Cinematography from './pages/Cinematography';
 import Costume from './pages/Costume';
+import Documentary from './pages/Documentary';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -52,6 +53,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/costume' element={<Costume />} />
+          </Routes>
+          <Routes>
+            <Route path='/doc' element={<Documentary />} />
           </Routes>
           <ScoreBoard />
           <Routes>

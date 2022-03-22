@@ -6,8 +6,10 @@ import {ImWoman} from 'react-icons/im'
 import {IoMdWoman} from 'react-icons/io'
 import {FcFilmReel} from 'react-icons/fc'
 import {FaPhotoVideo} from 'react-icons/fa'
+import {FaFeatherAlt} from 'react-icons/fa'
 import {MdDesignServices} from 'react-icons/md'
 import {GiPodium} from 'react-icons/gi'
+import {GiFeather} from 'react-icons/gi'
 import {Link} from 'react-router-dom'
 
 function CategoryLinks() {
@@ -72,6 +74,12 @@ function CategoryLinks() {
           <MdDesignServices size={30}/>        
         </Link>  
         <p className='b'>costume</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/doc'>
+          <FaFeatherAlt size={30}/>        
+        </Link>  
+        <p className='b'>docum</p>    
       </div>
     </div>
   )
