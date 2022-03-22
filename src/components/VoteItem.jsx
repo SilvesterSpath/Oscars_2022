@@ -29,6 +29,8 @@ function VoteItem({item, type}) {
         return item.costume;
       case 'doc':
         return item.doc;
+      case 'docs':
+        return item.docs;
       default:
         return [];
     }

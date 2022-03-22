@@ -10,6 +10,7 @@ import {FaFeatherAlt} from 'react-icons/fa'
 import {MdDesignServices} from 'react-icons/md'
 import {GiPodium} from 'react-icons/gi'
 import {GiFeather} from 'react-icons/gi'
+import {RiScissors2Fill} from 'react-icons/ri'
 import {Link} from 'react-router-dom'
 
 function CategoryLinks() {
@@ -80,6 +81,18 @@ function CategoryLinks() {
           <FaFeatherAlt size={30}/>        
         </Link>  
         <p className='b'>docum</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/docs'>
+          <GiFeather size={30}/>        
+        </Link>  
+        <p className='b'>doc short</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/editing'>
+          <RiScissors2Fill size={30}/>        
+        </Link>  
+        <p className='b'>editing</p>    
       </div>
     </div>
   )

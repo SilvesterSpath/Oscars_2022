@@ -12,6 +12,8 @@ import Animated from './pages/Animated';
 import Cinematography from './pages/Cinematography';
 import Costume from './pages/Costume';
 import Documentary from './pages/Documentary';
+import DocumentaryS from './pages/DocumentaryS';
+import Editing from './pages/Editing';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -56,6 +58,12 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/doc' element={<Documentary />} />
+          </Routes>
+          <Routes>
+            <Route path='/docs' element={<DocumentaryS />} />
+          </Routes>
+          <Routes>
+            <Route path='/editing' element={<Editing />} />
           </Routes>
           <ScoreBoard />
           <Routes>

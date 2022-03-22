@@ -39,6 +39,13 @@ const [doc, setDoc] = useState([{
 }
 ])
 
+const [docs, setDocS] = useState([{
+  id: 1,
+  text: 'Example name',
+  docs: 'Example docum short'
+}
+])
+
 const [actress_sup, setActressSup] = useState([{
   id: 1,
   text: 'Example name',
@@ -93,6 +100,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
       if (type === 'cinematography') setCinematography(cinematography.filter((item) => item.id !== id));      
       if (type === 'costume') setCostume(costume.filter((item) => item.id !== id));      
       if (type === 'doc') setDoc(doc.filter((item) => item.id !== id));      
+      if (type === 'docs') setDocS(docs.filter((item) => item.id !== id));      
     }
   };
 
@@ -119,6 +127,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     if(type === 'cinematography') setCinematography([newFeedback, ...cinematography]);
     if(type === 'costume') setCostume([newFeedback, ...costume]);
     if(type === 'doc') setDoc([newFeedback, ...doc]);
+    if(type === 'docs') setDocS([newFeedback, ...docs]);
     
   };
 
@@ -138,6 +147,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     cinematography,
     costume,
     doc,
+    docs,
     deleteItem,
     addItem,
     editFeedback,

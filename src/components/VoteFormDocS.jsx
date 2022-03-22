@@ -1,14 +1,14 @@
 import { useState, useContext, useEffect } from "react"
 import Card from "../shared/Card"
 import Button from "../shared/Button"
-import SelectDoc from "./SelectDoc"
+import SelectDocS from "./SelectDocS"
 import FeedbackContext from "../context/FeedbackContext"
 
 function VoteFormCinematography() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
   const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
-  const [doc, setDoc] = useState('')
+  const [docs, setDocS] = useState('')
 
   const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
 
@@ -16,9 +16,9 @@ function VoteFormCinematography() {
     if(feedbackEditState.edit){
       setBtnDisables(false)
       setText(feedbackEditState.item.text)
-      setDoc(feedbackEditState.item.doc)      
+      setDocS(feedbackEditState.item.docs)      
     }
-  },[feedbackEditState.edit, feedbackEditState.item.text, feedbackEditState.item.doc])
+  },[feedbackEditState.edit, feedbackEditState.item.text, feedbackEditState.item.docs])
 
   const handleTextChange = (e)=>{     
     console.log(text);   
@@ -38,12 +38,12 @@ function VoteFormCinematography() {
     if(text.trim().length > 1){
       const newFeedback = {         
         text,
-        doc
+        docs
       }
       if(feedbackEditState.edit){
         updateFeedback(feedbackEditState.item.id, newFeedback)
       } else {
-        addItem(newFeedback, "doc");
+        addItem(newFeedback, "docs");
         setText('')
       }     
     }
@@ -52,8 +52,8 @@ function VoteFormCinematography() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>Oscar nominations for best documentary (feature):</h2>
-        <SelectDoc select={(doc)=>setDoc(doc)}/>
+        <h2>Oscar nominations for best documentary (short)</h2>
+        <SelectDocS select={(docs)=>setDocS(docs)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">
