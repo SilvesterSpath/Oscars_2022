@@ -9,6 +9,7 @@ import ActressSup from './pages/ActressSup';
 import Director from './pages/Director';
 import Animated from './pages/Animated';
 import Cinematography from './pages/Cinematography';
+import Costume from './pages/Costume';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -44,6 +45,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/cinematography' element={<Cinematography />} />
+          </Routes>
+          <Routes>
+            <Route path='/costume' element={<Costume />} />
           </Routes>
           <ScoreBoard />
           <Routes>

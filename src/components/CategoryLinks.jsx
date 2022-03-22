@@ -6,6 +6,7 @@ import {ImWoman} from 'react-icons/im'
 import {IoMdWoman} from 'react-icons/io'
 import {FcFilmReel} from 'react-icons/fc'
 import {FaPhotoVideo} from 'react-icons/fa'
+import {MdDesignServices} from 'react-icons/md'
 import {Link} from 'react-router-dom'
 
 function CategoryLinks() {
@@ -57,7 +58,13 @@ function CategoryLinks() {
         <Link className='a' to='/cinematography'>
           <FaPhotoVideo size={30}/>        
         </Link>  
-        <p className='b'>cinematography</p>    
+        <p className='b'>cinematogr</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/costume'>
+          <MdDesignServices size={30}/>        
+        </Link>  
+        <p className='b'>costume</p>    
       </div>
     </div>
   )

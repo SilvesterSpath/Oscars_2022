@@ -25,6 +25,8 @@ function VoteItem({item, type}) {
         return item.animated;
       case 'cinematography':
         return item.cinematography;
+      case 'costume':
+        return item.costume;
       default:
         return [];
     }

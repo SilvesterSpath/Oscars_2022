@@ -60,6 +60,13 @@ const [animated, setAnimated] = useState([{
 }
 ])
 
+const [costume, setCostume] = useState([{
+  id: 1,
+  text: 'Example name',
+  costume: 'Example costume'
+}
+])
+
 
 const [feedbackEditState, setFeedbackEditState] = useState({
   item: {},
@@ -76,7 +83,8 @@ const [feedbackEditState, setFeedbackEditState] = useState({
       if (type === 'actress-sup') setActressSup(actress_sup.filter((item) => item.id !== id));      
       if (type === 'animated') setAnimated(animated.filter((item) => item.id !== id));      
       if (type === 'actor-sup') setActorSup(actor_sup.filter((item) => item.id !== id));      
-      if (type === 'cinematography') setActorSup(cinematography.filter((item) => item.id !== id));      
+      if (type === 'cinematography') setCinematography(cinematography.filter((item) => item.id !== id));      
+      if (type === 'costume') setCostume(costume.filter((item) => item.id !== id));      
     }
   };
 
@@ -101,7 +109,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     if(type === 'directors') setDirectors([newFeedback, ...directors]);
     if(type === 'animated') setAnimated([newFeedback, ...animated]);
     if(type === 'cinematography') setCinematography([newFeedback, ...cinematography]);
-
+    if(type === 'costume') setCostume([newFeedback, ...costume]);
     
   };
 
@@ -119,6 +127,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     animated,
     actor_sup,
     cinematography,
+    costume,
     deleteItem,
     addItem,
     editFeedback,
