@@ -33,6 +33,8 @@ function VoteItem({item, type}) {
         return item.docs;
       case 'editing':
         return item.editing;
+      case 'internat':
+        return item.internat;
       default:
         return [];
     }

@@ -88,6 +88,13 @@ const [editing, setEditing] = useState([{
 }
 ])
 
+const [internat, setInternat] = useState([{
+  id: 1,
+  text: 'Example name',
+  internat: 'Example internat'
+}
+])
+
 
 const [feedbackEditState, setFeedbackEditState] = useState({
   item: {},
@@ -109,6 +116,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
       if (type === 'doc') setDoc(doc.filter((item) => item.id !== id));      
       if (type === 'docs') setDocS(docs.filter((item) => item.id !== id));      
       if (type === 'editing') setEditing(editing.filter((item) => item.id !== id));      
+      if (type === 'internat') setInternat(internat.filter((item) => item.id !== id));      
     }
   };
 
@@ -137,6 +145,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     if(type === 'doc') setDoc([newFeedback, ...doc]);
     if(type === 'docs') setDocS([newFeedback, ...docs]);
     if(type === 'editing') setEditing([newFeedback, ...editing]);
+    if(type === 'internat') setInternat([newFeedback, ...internat]);
   
   };
 
@@ -158,6 +167,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     doc,
     docs,
     editing,
+    internat,
     deleteItem,
     addItem,
     editFeedback,

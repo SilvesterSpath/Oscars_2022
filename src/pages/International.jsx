@@ -1,11 +1,11 @@
-import VoteFormEditing from '../components/VoteFormEditing';
-import VoteListEditing from '../components/VoteListEditing';
+import VoteFormInternat from '../components/VoteFormInternat';
+import VoteListInternat from '../components/VoteListInternat';
 
 function Actor() {
     return (
     <>     
-      <VoteFormEditing />
-      <VoteListEditing />
+      <VoteFormInternat />
+      <VoteListInternat />
     </>
   )
 }
