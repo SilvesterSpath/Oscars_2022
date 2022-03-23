@@ -16,6 +16,8 @@ import DocumentaryS from './pages/DocumentaryS';
 import Editing from './pages/Editing';
 import International from './pages/International';
 import Makeup from './pages/Makeup';
+import Score from './pages/Score';
+import Song from './pages/Song';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -72,6 +74,12 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/makeup' element={<Makeup />} />
+          </Routes>
+          <Routes>
+            <Route path='/score' element={<Score />} />
+          </Routes>
+          <Routes>
+            <Route path='/song' element={<Song />} />
           </Routes>
           <ScoreBoard />
           <Routes>

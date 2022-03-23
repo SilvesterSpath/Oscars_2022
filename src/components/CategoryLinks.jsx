@@ -1,10 +1,11 @@
 import {MdRecentActors} from 'react-icons/md'
 import {MdOutlineRecentActors} from 'react-icons/md'
+import {MdOutlineAnimation} from 'react-icons/md'
 import {BiMoviePlay} from 'react-icons/bi'
 import {GiDirectorChair} from 'react-icons/gi'
 import {ImWoman} from 'react-icons/im'
 import {IoMdWoman} from 'react-icons/io'
-import {FcFilmReel} from 'react-icons/fc'
+import {BsMusicNote} from 'react-icons/bs'
 import {FaPhotoVideo} from 'react-icons/fa'
 import {FaFeatherAlt} from 'react-icons/fa'
 import {FaYandexInternational} from 'react-icons/fa'
@@ -12,6 +13,7 @@ import {MdDesignServices} from 'react-icons/md'
 import {GiPodium} from 'react-icons/gi'
 import {GiHairStrands} from 'react-icons/gi'
 import {GiFeather} from 'react-icons/gi'
+import {GiMusicalScore} from 'react-icons/gi'
 import {RiScissors2Fill} from 'react-icons/ri'
 import {Link} from 'react-router-dom'
 
@@ -62,7 +64,7 @@ function CategoryLinks() {
     </div>
       <div className='links'>
         <Link className='a' to='/animated'>
-          <FcFilmReel size={30}/>        
+          <MdOutlineAnimation size={30} />        
         </Link>  
         <p className='b'>animated</p>    
       </div>
@@ -86,7 +88,7 @@ function CategoryLinks() {
       </div>
       <div className='links'>
         <Link className='a' to='/docs'>
-          <GiFeather size={30}/>        
+          <GiFeather size={30} />        
         </Link>  
         <p className='b'>doc short</p>    
       </div>
@@ -107,6 +109,18 @@ function CategoryLinks() {
           <GiHairStrands size={30}/>        
         </Link>  
         <p className='b'>makeup</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/score'>
+          <GiMusicalScore size={30}/>        
+        </Link>  
+        <p className='b'>score</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/song'>
+          <BsMusicNote size={30}/>        
+        </Link>  
+        <p className='b'>song</p>    
       </div>
     </div>
   )

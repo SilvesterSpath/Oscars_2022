@@ -102,6 +102,21 @@ const [internat, setInternat] = useState([{
 }
 ])
 
+const [score, setScore] = useState([{
+  id: 1,
+  text: 'Example name',
+  score: 'Example score'
+}
+])
+
+const [song, setSong] = useState([{
+  id: 1,
+  text: 'Example name',
+  song: 'Example song'
+}
+])
+
+
 
 const [feedbackEditState, setFeedbackEditState] = useState({
   item: {},
@@ -125,6 +140,8 @@ const [feedbackEditState, setFeedbackEditState] = useState({
       if (type === 'editing') setEditing(editing.filter((item) => item.id !== id));      
       if (type === 'internat') setInternat(internat.filter((item) => item.id !== id));      
       if (type === 'makeup') setMakeup(makeup.filter((item) => item.id !== id));      
+      if (type === 'score') setScore(score.filter((item) => item.id !== id));      
+      if (type === 'song') setSong(song.filter((item) => item.id !== id));      
     }
   };
 
@@ -155,6 +172,8 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     if(type === 'editing') setEditing([newFeedback, ...editing]);
     if(type === 'internat') setInternat([newFeedback, ...internat]);
     if(type === 'makeup') setMakeup([newFeedback, ...makeup]);
+    if(type === 'score') setScore([newFeedback, ...score]);
+    if(type === 'song') setSong([newFeedback, ...song]);
   
   };
 
@@ -178,6 +197,8 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     editing,
     internat,
     makeup,
+    score,
+    song,
     deleteItem,
     addItem,
     editFeedback,

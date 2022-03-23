@@ -37,6 +37,10 @@ function VoteItem({item, type}) {
         return item.internat;
       case 'makeup':
         return item.makeup;
+      case 'score':
+        return item.score;
+      case 'song':
+        return item.song;
       default:
         return [];
     }

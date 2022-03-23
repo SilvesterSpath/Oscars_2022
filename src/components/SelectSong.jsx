@@ -3,12 +3,12 @@ import FeedbackContext from "../context/FeedbackContext"
 
 function SelectMakeup({select}) {
   const [selected, setSelected] = useState(null)
-  const bestMakeup = [
-    'COMING 2 AMERICA',
-    'CRUELLA',
-    'DUNE',
-    'THE EYES OF TAMMY FAYE',
-    'HOUSE OF GUCCI',
+  const bestSong = [
+    'Be Alive KING RICHARD',
+    'Dos Oruguitas ENCANTO',
+    'Down To Joy BELFAST',
+    'No Time To Die NO TIME TO DIE',
+    'Somehow You Do FOUR GOOD DAYS',
   ]
 
   const handleChange2 = (e)=>{
@@ -27,12 +27,12 @@ function SelectMakeup({select}) {
 
   return (
     <ul className='rating'>
-      {bestMakeup.map((item, idx)=> (
+      {bestSong.map((item, idx)=> (
         <li key={`rating-${idx + 1}`}>
           <input
             type='radio'
             id={idx}
-            name='makeup'
+            name='song'
             value={item}
             onChange={handleChange2}
             checked={selected === idx}
