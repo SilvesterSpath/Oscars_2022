@@ -1,6 +1,7 @@
 import {MdRecentActors} from 'react-icons/md'
 import {MdOutlineRecentActors} from 'react-icons/md'
 import {MdOutlineAnimation} from 'react-icons/md'
+import {MdAnimation} from 'react-icons/md'
 import {BiMoviePlay} from 'react-icons/bi'
 import {GiDirectorChair} from 'react-icons/gi'
 import {ImWoman} from 'react-icons/im'
@@ -12,9 +13,15 @@ import {FaYandexInternational} from 'react-icons/fa'
 import {MdDesignServices} from 'react-icons/md'
 import {GiPodium} from 'react-icons/gi'
 import {GiHairStrands} from 'react-icons/gi'
+import {GiFilmSpool} from 'react-icons/gi'
 import {GiFeather} from 'react-icons/gi'
 import {GiMusicalScore} from 'react-icons/gi'
 import {RiScissors2Fill} from 'react-icons/ri'
+import {SiAltiumdesigner} from 'react-icons/si'
+import {AiOutlineSound} from 'react-icons/ai'
+import {HiSparkles} from 'react-icons/hi'
+import {RiFilePaper2Fill} from 'react-icons/ri'
+import {FaRegNewspaper} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 
 function CategoryLinks() {
@@ -64,7 +71,7 @@ function CategoryLinks() {
     </div>
       <div className='links'>
         <Link className='a' to='/animated'>
-          <MdOutlineAnimation size={30} />        
+          <MdAnimation size={30} />        
         </Link>  
         <p className='b'>animated</p>    
       </div>
@@ -121,6 +128,48 @@ function CategoryLinks() {
           <BsMusicNote size={30}/>        
         </Link>  
         <p className='b'>song</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/design'>
+          <SiAltiumdesigner size={30}/>        
+        </Link>  
+        <p className='b'>design</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/anim_short'>
+          <MdOutlineAnimation size={20}/>        
+        </Link>  
+        <p className='b'>anim_short</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/short'>
+          <GiFilmSpool size={30}/>        
+        </Link>  
+        <p className='b'>short</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/sound'>
+          <AiOutlineSound size={30}/>        
+        </Link>  
+        <p className='b'>sound</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/effects'>
+          <HiSparkles size={30}/>        
+        </Link>  
+        <p className='b'>effects</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/adapted'>
+          <RiFilePaper2Fill size={30}/>        
+        </Link>  
+        <p className='b'>adapted</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/original'>
+          <FaRegNewspaper size={30}/>        
+        </Link>  
+        <p className='b'>original</p>    
       </div>
     </div>
   )
