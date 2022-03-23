@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
+import image from '../img/Rectangle3.jpg'
 
-function Header({bgColor, textColor, text}) {
+function Header({textColor, text}) {
+  console.log( {image});
  
   return (
-    <header style={{backgroundColor: bgColor, color: textColor}}>
+    <header style={{backgroundImage: `url(${image})`, color: textColor, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
       <div className="container"> 
         <h2>{text}</h2>      
       </div>
@@ -11,14 +13,12 @@ function Header({bgColor, textColor, text}) {
   )
 }
 
-Header.defaultProps = {  
-  bgColor: 'rgba(0,0,50,0.4)',
-  textColor: '#ff6a95',
+Header.defaultProps = {      
+  textColor: '#FBEC91',
   text: '..and the Oscar goes to..'
 }
 
-Header.propTypes = {
-  bgColor: PropTypes.string,
+Header.propTypes = {  
   textColor: PropTypes.string
 }
 

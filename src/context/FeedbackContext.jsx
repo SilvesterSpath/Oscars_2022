@@ -88,6 +88,13 @@ const [editing, setEditing] = useState([{
 }
 ])
 
+const [makeup, setMakeup] = useState([{
+  id: 1,
+  text: 'Example name',
+  makeup: 'Example makeup'
+}
+])
+
 const [internat, setInternat] = useState([{
   id: 1,
   text: 'Example name',
@@ -117,6 +124,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
       if (type === 'docs') setDocS(docs.filter((item) => item.id !== id));      
       if (type === 'editing') setEditing(editing.filter((item) => item.id !== id));      
       if (type === 'internat') setInternat(internat.filter((item) => item.id !== id));      
+      if (type === 'makeup') setMakeup(makeup.filter((item) => item.id !== id));      
     }
   };
 
@@ -146,6 +154,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     if(type === 'docs') setDocS([newFeedback, ...docs]);
     if(type === 'editing') setEditing([newFeedback, ...editing]);
     if(type === 'internat') setInternat([newFeedback, ...internat]);
+    if(type === 'makeup') setMakeup([newFeedback, ...makeup]);
   
   };
 
@@ -168,6 +177,7 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     docs,
     editing,
     internat,
+    makeup,
     deleteItem,
     addItem,
     editFeedback,

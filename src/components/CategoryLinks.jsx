@@ -10,6 +10,7 @@ import {FaFeatherAlt} from 'react-icons/fa'
 import {FaYandexInternational} from 'react-icons/fa'
 import {MdDesignServices} from 'react-icons/md'
 import {GiPodium} from 'react-icons/gi'
+import {GiHairStrands} from 'react-icons/gi'
 import {GiFeather} from 'react-icons/gi'
 import {RiScissors2Fill} from 'react-icons/ri'
 import {Link} from 'react-router-dom'
@@ -100,6 +101,12 @@ function CategoryLinks() {
           <FaYandexInternational size={30}/>        
         </Link>  
         <p className='b'>internat</p>    
+      </div>
+      <div className='links'>
+        <Link className='a' to='/makeup'>
+          <GiHairStrands size={30}/>        
+        </Link>  
+        <p className='b'>makeup</p>    
       </div>
     </div>
   )

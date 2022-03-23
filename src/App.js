@@ -15,6 +15,7 @@ import Documentary from './pages/Documentary';
 import DocumentaryS from './pages/DocumentaryS';
 import Editing from './pages/Editing';
 import International from './pages/International';
+import Makeup from './pages/Makeup';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -68,6 +69,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/internat' element={<International />} />
+          </Routes>
+          <Routes>
+            <Route path='/makeup' element={<Makeup />} />
           </Routes>
           <ScoreBoard />
           <Routes>

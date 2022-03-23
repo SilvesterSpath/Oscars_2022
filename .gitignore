@@ -6,7 +6,7 @@
 .pnp.js
 
 # images
-/src/img
+_store
 
 
 # text files
