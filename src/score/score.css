@@ -36,7 +36,8 @@
   margin: 3px;
   min-width: 20px;
   color: black;
-  background: orange;
+  background: rgb(187, 122, 0);
+  border-radius: 4px;
 }
 
 @media (max-width: 600px) {
