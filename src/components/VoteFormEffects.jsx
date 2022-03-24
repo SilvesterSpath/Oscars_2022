@@ -8,7 +8,7 @@ function FeedbackFormActor() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
   const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
-  const [effets, setEffets] = useState('')
+  const [effects, setEffects] = useState('')
 
   const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
 
@@ -16,9 +16,9 @@ function FeedbackFormActor() {
     if(feedbackEditState.edit){
       setBtnDisables(false)
       setText(feedbackEditState.item.text)
-      setEffets(feedbackEditState.item.effets)      
+      setEffects(feedbackEditState.item.effects)      
     }
-  },[feedbackEditState.edit, feedbackEditState.item.text, feedbackEditState.item.effets])
+  },[feedbackEditState.edit, feedbackEditState.item.text, feedbackEditState.item.effects])
 
   const handleTextChange = (e)=>{     
     console.log(text);   
@@ -38,12 +38,12 @@ function FeedbackFormActor() {
     if(text.trim().length > 1){
       const newFeedback = {         
         text,
-        effets
+        effects
       }
       if(feedbackEditState.edit){
         updateFeedback(feedbackEditState.item.id, newFeedback)
       } else {
-        addItem(newFeedback, "effets");
+        addItem(newFeedback, "effects");
         setText('')
       }     
     }
@@ -52,8 +52,8 @@ function FeedbackFormActor() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>Oscar nominations for best visual effets:</h2>
-        <SelectEffects select={(effets)=>setEffets(effets)}/>
+        <h2>Oscar nominations for best visual effects:</h2>
+        <SelectEffects select={(effects)=>setEffects(effects)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">

@@ -66,25 +66,25 @@ header {
 .num-display {
   position: relative;
   background: #f4f4f4;
-  width: 100px;
+  width: 112px;
   height: 80px;
-  padding: 10px;
+  padding: 2% 0px;
   text-align: center;
-  border-radius: 25%;
-  font-size: 15px;
+  border-radius: 30%;
+  font-size: 13px;
   border: 1px #eee solid;
   transition: 0.3s;
 }
 
 .rating li label {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
-  width: 100px;
+  width: 112px;
   height: 100px;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 15px;
+  padding: 9px 15px;
+  border-radius: 30%;
+  font-size: 13px;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }

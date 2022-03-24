@@ -4,16 +4,16 @@ import FeedbackContext from "../context/FeedbackContext"
 function RatingSelect({select}) {
   const [selected, setSelected] = useState(null)
   const bestPicture = [
-    'Belfast',
-    'Coda',
-    'Drive my car',
-    "Don't look up",
-    'Dune',
-    'King Richard',
-    'Licorice Pizza',
-    'Nightmare Alley',
-    'The power of the dog',
-    'West side story'
+    'BELFAST',
+    'CODA',
+    'DRIVE MY CAR',
+    "DON'T LOOK UP",
+    'DUNE',
+    'KING RICHARD',
+    'LICORICE PIZZA',
+    'NIGHTMARE ALLEY',
+    'THE POWER OF THE DOG',
+    'WEST SIDE STORY'
   ]
 
   const handleChange1 = (e)=>{

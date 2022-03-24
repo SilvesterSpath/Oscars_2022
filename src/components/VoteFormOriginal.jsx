@@ -52,7 +52,7 @@ function FeedbackFormActor() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>Oscar nominations for best original original:</h2>
+        <h2>Oscar nominations for best original screenplay:</h2>
         <SelectOriginal select={(original)=>setOriginal(original)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>

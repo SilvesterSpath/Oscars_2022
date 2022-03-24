@@ -7,8 +7,8 @@ function RatingSelectActor({select}) {
     'DUNE',
     'FREE GUY',
     'NO TIME TO DIE',
-    'SHANG-CHI AND TEN RINGS',
-    'SPIDER-MAN',
+    'SHANG-CHI AND THE TEN RINGS',
+    'SPIDER-MAN: NO WAY HOME',
   ]
 
   const handleChange2 = (e)=>{
