@@ -8,14 +8,14 @@ function FeedbackListActress() {
   const {actress_sup} = useContext(FeedbackContext)
   
 
-  if(!actress_sup || actress_sup.length === 0){
-    return <p>No Feedback Yet</p>
+  if(!actress_sup || actress_sup.length === 1){
+    return <p>No Vote Yet</p>
   }
   
   return (
     <div className="feedback-list">  
     <AnimatePresence>
-      {actress_sup.map((item, idx)=>(
+      {actress_sup.slice(1).map((item, idx)=>(
         <motion.div key={uuidv4()} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
           <VoteItem key={idx} item={item} type={'actress-sup'}/>
         </motion.div>        

@@ -207,29 +207,29 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     if(isNaN(newFeedback.id)){
       newFeedback.id = uuidv4();
     }
-    if(type === 'movies') setMovies([newFeedback, ...movies]);
-    if(type === 'actors') setActors([newFeedback, ...actors]);
-    if(type === 'actor-sup') setActorSup([newFeedback, ...actor_sup]);
-    if(type === 'actress') setActress([newFeedback, ...actress]);
-    if(type === 'actress-sup') setActressSup([newFeedback, ...actress_sup]);
-    if(type === 'directors') setDirectors([newFeedback, ...directors]);
-    if(type === 'animated') setAnimated([newFeedback, ...animated]);
-    if(type === 'cinematography') setCinematography([newFeedback, ...cinematography]);
-    if(type === 'costume') setCostume([newFeedback, ...costume]);
-    if(type === 'doc') setDoc([newFeedback, ...doc]);
-    if(type === 'docs') setDocS([newFeedback, ...docs]);
-    if(type === 'editing') setEditing([newFeedback, ...editing]);
-    if(type === 'internat') setInternat([newFeedback, ...internat]);
-    if(type === 'makeup') setMakeup([newFeedback, ...makeup]);
-    if(type === 'score') setScore([newFeedback, ...score]);
-    if(type === 'song') setSong([newFeedback, ...song]);
-    if(type === 'design') setDesign([newFeedback, ...design]);
-    if(type === 'anims') setAnims([newFeedback, ...anims]);
-    if(type === 'short') setShort([newFeedback, ...short]);
-    if(type === 'sound') setSound([newFeedback, ...sound]);
-    if(type === 'effects') setEffects([newFeedback, ...effects]);
-    if(type === 'adapted') setAdapted([newFeedback, ...adapted]);
-    if(type === 'original') setOriginal([newFeedback, ...original]);
+    if(type === 'movies') setMovies([ ...movies, newFeedback]);
+    if(type === 'actors') setActors([ ...actors, newFeedback]);
+    if(type === 'actor-sup') setActorSup([ ...actor_sup,newFeedback]);
+    if(type === 'actress') setActress([ ...actress ,newFeedback]);
+    if(type === 'actress-sup') setActressSup([ ...actress_sup ,newFeedback]);
+    if(type === 'directors') setDirectors([ ...directors ,newFeedback]);
+    if(type === 'animated') setAnimated([ ...animated ,newFeedback]);
+    if(type === 'cinematography') setCinematography([ ...cinematography ,newFeedback]);
+    if(type === 'costume') setCostume([ ...costume ,newFeedback]);
+    if(type === 'doc') setDoc([ ...doc ,newFeedback]);
+    if(type === 'docs') setDocS([ ...docs ,newFeedback]);
+    if(type === 'editing') setEditing([ ...editing ,newFeedback]);
+    if(type === 'internat') setInternat([ ...internat ,newFeedback]);
+    if(type === 'makeup') setMakeup([ ...makeup ,newFeedback]);
+    if(type === 'score') setScore([ ...score ,newFeedback]);
+    if(type === 'song') setSong([ ...song ,newFeedback]);
+    if(type === 'design') setDesign([ ...design ,newFeedback]);
+    if(type === 'anims') setAnims([ ...anims ,newFeedback]);
+    if(type === 'short') setShort([ ...short ,newFeedback]);
+    if(type === 'sound') setSound([ ...sound ,newFeedback]);
+    if(type === 'effects') setEffects([ ...effects ,newFeedback]);
+    if(type === 'adapted') setAdapted([ ...adapted ,newFeedback]);
+    if(type === 'original') setOriginal([ ...original ,newFeedback]);
   
   };
 

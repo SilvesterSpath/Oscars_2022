@@ -7,7 +7,7 @@ import FeedbackContext from "../context/FeedbackContext"
 function VoteFormCinematography() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
-  const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
+  const [message, setMessage] = useState('Select a nominant and send your vote')
   const [doc, setDoc] = useState('')
 
   const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
@@ -55,7 +55,7 @@ function VoteFormCinematography() {
         <h2>Oscar nominations for best documentary (feature):</h2>
         <SelectDoc select={(doc)=>setDoc(doc)}/>
         <div className="input-group">
-          <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
+          <input type="text" placeholder="Write your name or choose from dropdown.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">
             <option value="Szilvi"/>
             <option value="Szilveszter"/>

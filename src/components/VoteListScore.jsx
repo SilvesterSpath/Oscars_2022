@@ -8,14 +8,14 @@ function VoteListDirector() {
   const {score} = useContext(FeedbackContext)
   
 
-  if(!score || score.length === 0){
-    return <p>No Feedback Yet</p>
+  if(!score || score.length === 1){
+    return <p>No Vote Yet</p>
   }
   
   return (
     <div className="feedback-list">  
     <AnimatePresence>
-      {score.map((item, idx)=>(
+      {score.slice(1).map((item, idx)=>(
         <motion.div key={uuidv4()} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity:0}}>
           <VoteItem key={idx} item={item} type={'score'}/>
         </motion.div>        

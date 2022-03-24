@@ -7,7 +7,7 @@ import FeedbackContext from "../context/FeedbackContext"
 function FeedbackFormActor() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisables] = useState(false)
-  const [message, setMessage] = useState('Write or choose your name from the dropdown menu')
+  const [message, setMessage] = useState('Select a nominant and send your vote')
   const [makeup, setMakeup] = useState('')
 
   const {addItem, feedbackEditState, updateFeedback} = useContext(FeedbackContext)
@@ -55,7 +55,7 @@ function FeedbackFormActor() {
         <h2>Oscar nominations for best makeup and hairstyle:</h2>
         <SelectMakeup select={(makeup)=>setMakeup(makeup)}/>
         <div className="input-group">
-          <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
+          <input type="text" placeholder="Write your name or choose from dropdown.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">
             <option value="Szilvi"/>
             <option value="Szilveszter"/>
