@@ -1,7 +1,7 @@
 import VoteFormSong from '../components/VoteFormSong';
 import VoteListSong from '../components/VoteListSong';
 
-function Actor() {
+function Song() {
     return (
     <>     
       <VoteFormSong />
@@ -10,4 +10,4 @@ function Actor() {
   )
 }
 
-export default Actor
+export default Song

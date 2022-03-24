@@ -109,11 +109,53 @@ const [score, setScore] = useState([{
 }
 ])
 
+const [design, setDesign] = useState([{
+    id: 1,
+    text: 'Example name',
+    design: 'Example design'
+  }
+])
+const [anims, setAnims] = useState([{
+    id: 1,
+    text: 'Example name',
+    anims: 'Example anims'
+  }
+])
+const [short, setShort] = useState([{
+    id: 1,
+    text: 'Example name',
+    short: 'Example short'
+  }
+])
+const [sound, setSound] = useState([{
+    id: 1,
+    text: 'Example name',
+    sound: 'Example sound'
+  }
+])
+const [effects, setEffects] = useState([{
+    id: 1,
+    text: 'Example name',
+    effects: 'Example effects'
+  }
+])
+const [adapted, setAdapted] = useState([{
+    id: 1,
+    text: 'Example name',
+    adapted: 'Example adapted'
+  }
+])
+const [original, setOriginal] = useState([{
+    id: 1,
+    text: 'Example name',
+    original: 'Example original'
+  }
+])
 const [song, setSong] = useState([{
-  id: 1,
-  text: 'Example name',
-  song: 'Example song'
-}
+    id: 1,
+    text: 'Example name',
+    song: 'Example song'
+  }
 ])
 
 
@@ -142,6 +184,13 @@ const [feedbackEditState, setFeedbackEditState] = useState({
       if (type === 'makeup') setMakeup(makeup.filter((item) => item.id !== id));      
       if (type === 'score') setScore(score.filter((item) => item.id !== id));      
       if (type === 'song') setSong(song.filter((item) => item.id !== id));      
+      if (type === 'design') setDesign(design.filter((item) => item.id !== id));      
+      if (type === 'anims') setAnims(anims.filter((item) => item.id !== id));      
+      if (type === 'short') setShort(short.filter((item) => item.id !== id));      
+      if (type === 'sound') setSound(sound.filter((item) => item.id !== id));      
+      if (type === 'effects') setEffects(effects.filter((item) => item.id !== id));      
+      if (type === 'adapted') setAdapted(adapted.filter((item) => item.id !== id));      
+      if (type === 'original') setOriginal(original.filter((item) => item.id !== id));      
     }
   };
 
@@ -174,6 +223,13 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     if(type === 'makeup') setMakeup([newFeedback, ...makeup]);
     if(type === 'score') setScore([newFeedback, ...score]);
     if(type === 'song') setSong([newFeedback, ...song]);
+    if(type === 'design') setDesign([newFeedback, ...design]);
+    if(type === 'anims') setAnims([newFeedback, ...anims]);
+    if(type === 'short') setShort([newFeedback, ...short]);
+    if(type === 'sound') setSound([newFeedback, ...sound]);
+    if(type === 'effects') setEffects([newFeedback, ...effects]);
+    if(type === 'adapted') setAdapted([newFeedback, ...adapted]);
+    if(type === 'original') setOriginal([newFeedback, ...original]);
   
   };
 
@@ -199,6 +255,13 @@ const [feedbackEditState, setFeedbackEditState] = useState({
     makeup,
     score,
     song,
+    design,
+    anims,
+    short,
+    sound,
+    effects,
+    adapted,
+    original,
     deleteItem,
     addItem,
     editFeedback,

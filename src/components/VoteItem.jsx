@@ -41,6 +41,20 @@ function VoteItem({item, type}) {
         return item.score;
       case 'song':
         return item.song;
+      case 'design':
+        return item.design;
+      case 'anims':
+        return item.anims;
+      case 'short':
+        return item.short;
+      case 'sound':
+        return item.sound;
+      case 'effects':
+        return item.effects;
+      case 'adapted':
+        return item.adapted;
+      case 'original':
+        return item.original;
       default:
         return [];
     }

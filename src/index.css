@@ -222,6 +222,21 @@ input:focus {
   margin-top: 3px;
   text-align: center;
   min-width: 60px;
+  position: relative;
+  transition: top 3s;
+}
+
+.links:hover {
+  top: -2px;
+}
+
+.links .a {
+  position: absolute;
+  left: 20%;
+}
+
+.links .b {
+  margin-top: 30px;
 }
 
 .about h1 {

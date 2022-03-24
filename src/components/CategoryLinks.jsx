@@ -136,7 +136,7 @@ function CategoryLinks() {
         <p className='b'>design</p>    
       </div>
       <div className='links'>
-        <Link className='a' to='/anim_short'>
+        <Link className='a' to='/anims'>
           <MdOutlineAnimation size={20}/>        
         </Link>  
         <p className='b'>anim_short</p>    

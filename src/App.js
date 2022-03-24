@@ -18,6 +18,13 @@ import International from './pages/International';
 import Makeup from './pages/Makeup';
 import Score from './pages/Score';
 import Song from './pages/Song';
+import Design from './pages/Design';
+import AnimS from './pages/AnimS';
+import Short from './pages/Short';
+import Sound from './pages/Sound';
+import Effects from './pages/Song';
+import Adapted from './pages/Adapted';
+import Original from './pages/Original';
 import ScoreBoard from './score/ScoreBoard';
 import AboutIconLink from './components/AboutIconLink';
 import CategoryLinks from './components/CategoryLinks';
@@ -80,6 +87,27 @@ function App() {
           </Routes>
           <Routes>
             <Route path='/song' element={<Song />} />
+          </Routes>
+          <Routes>
+            <Route path='/design' element={<Design />} />
+          </Routes>
+          <Routes>
+            <Route path='/anims' element={<AnimS />} />
+          </Routes>
+          <Routes>
+            <Route path='/short' element={<Short />} />
+          </Routes>
+          <Routes>
+            <Route path='/sound' element={<Sound />} />
+          </Routes>
+          <Routes>
+            <Route path='/effects' element={<Effects />} />
+          </Routes>
+          <Routes>
+            <Route path='/adapted' element={<Adapted />} />
+          </Routes>
+          <Routes>
+            <Route path='/original' element={<Original />} />
           </Routes>
           <ScoreBoard />
           <Routes>
