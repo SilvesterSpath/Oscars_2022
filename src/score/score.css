@@ -29,14 +29,14 @@
 
 .panelScore {
   display: block;
-  color: #f8f5e4;
+  color: #f1d27c;
 }
 
 .incrementer {
   margin: 3px;
   min-width: 20px;
   color: black;
-  background: #fffbe0;
+  background: #f1d27c;
   border-radius: 4px;
 }
 

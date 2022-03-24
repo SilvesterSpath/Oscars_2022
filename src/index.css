@@ -206,11 +206,11 @@ input:focus {
 }
 
 .a:hover + .b {
-  color: #f5df63;
+  color: #eec247;
 }
 
 .about-link a:hover {
-  color: #f5df63;
+  color: #eec247;
 }
 
 .about-link p {
