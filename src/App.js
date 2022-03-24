@@ -22,7 +22,7 @@ import Design from './pages/Design';
 import AnimS from './pages/AnimS';
 import Short from './pages/Short';
 import Sound from './pages/Sound';
-import Effects from './pages/Song';
+import Effects from './pages/Effects';
 import Adapted from './pages/Adapted';
 import Original from './pages/Original';
 import ScoreBoard from './score/ScoreBoard';

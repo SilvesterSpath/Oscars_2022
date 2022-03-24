@@ -53,7 +53,7 @@ function VoteFormActorSup() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>Oscar nominations for best actor:</h2>
+        <h2>Oscar nominations for best supporting actor:</h2>
         <SelectActorSup select={(actor_sup)=>setActorSup(actor_sup)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>

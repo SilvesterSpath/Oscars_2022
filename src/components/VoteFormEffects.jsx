@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react"
 import Card from "../shared/Card"
 import Button from "../shared/Button"
-import SelectEffets from "./SelectEffets"
+import SelectEffects from "./SelectEffects"
 import FeedbackContext from "../context/FeedbackContext"
 
 function FeedbackFormActor() {
@@ -52,8 +52,8 @@ function FeedbackFormActor() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>Oscar nominations for best original effets:</h2>
-        <SelectEffets select={(effets)=>setEffets(effets)}/>
+        <h2>Oscar nominations for best visual effets:</h2>
+        <SelectEffects select={(effets)=>setEffets(effets)}/>
         <div className="input-group">
           <input type="text" placeholder="Your name.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">
