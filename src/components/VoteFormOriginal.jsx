@@ -27,7 +27,7 @@ function FeedbackFormActor() {
       setMessage(null)
     } else {
       setBtnDisables(false)
-      setMessage('Choose a nominant (you can change it later)')
+      setMessage('Select a nominant and send your vote')
     }
 
     setText(e.target.value)
@@ -57,8 +57,8 @@ function FeedbackFormActor() {
         <div className="input-group">
           <input type="text" placeholder="Write your name or choose from dropdown.." value={text} list="names" onChange={(e)=> handleTextChange(e)}/>
           <datalist id="names">
-            <option value="Szilvi"/>
-            <option value="Szilveszter"/>
+            <option value="Voter_1"/>
+            <option value="Voter_2"/>
           </datalist>
           <Button type="submit" isDisabled={btnDisabled} >Send</Button>
         </div>

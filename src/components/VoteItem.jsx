@@ -66,9 +66,7 @@ function VoteItem({item, type}) {
       <button className="close" onClick={() => deleteItem(item.id, type)} >
         <FaTimes color='purple'/>
       </button>
-      <button className="edit" onClick={() => editFeedback(item)} >
-        <FaEdit color='purple'/>
-      </button>
+
       <div className="text-display">{item.text}</div>      
     </Card>
   )
